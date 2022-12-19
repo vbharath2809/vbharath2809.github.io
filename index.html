@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<style>
+  .allDivs {
+    margin: 15px;
+  }
+</style>
+
+<body>
+  <script type="text/javascript" src="./metadata.js"></script>
+  <script type="text/javascript" src="./src.js"></script>
+  <h1 align="left" style="margin:60px">IA licensing</h1>
+  <div align="left" style="margin:50px">
+    <form>
+      <div class="allDivs">
+        <a>Select Integration App</a>
+        <select id="appList" onchange="appChange()">
+        </select>
+      </div>
+
+      <div class="allDivs">
+        <a>Select Base Edition</a>
+        <select id="edition">
+          <option value="starter">Starter</option>
+          <option value="standard">Standard</option>
+          <option value="premium">Premium</option>
+        </select>
+      </div>
+
+      <div id="nstore_div" class="allDivs">
+        <label>Number of Additional Stores/Accounts</label>
+        <input id="nstore" class="store" placeholder="number of store" type="number" min="0">
+      </div>
+
+      <br />
+      <div id="bundle_div" class="allDivs">
+        <label>Number of FBA Bundle Addons</label>
+        <input id="bundle" class="store" placeholder="number of bundles" type="number" min="0">
+      </div>
+
+      <div id="nfba_div" style="padding-left: 30px;" class="allDivs">
+        <label>Number of AddOns For FBA Inventory Adjustment</label>
+        <input id="nfba" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+
+      <div id="transferOrder_div" style="padding-left: 30px;" class="allDivs">
+        <label>Number of AddOns For Transfer Order</label>
+        <input id="transferOrder" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+
+      <div id="customerReturns_div" style="padding-left: 30px;" class="allDivs">
+        <label>Number of AddOns for customer Returns</label>
+        <input id="customerReturns" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+      <br />
+
+      <div id="payouts_div" class="allDivs">
+        <label>Number of AddOns for Payouts</label>
+        <input id="payouts" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+
+      <div id="localSelling_div" class="allDivs">
+        <label>Number of AddOns for Amazon local selling</label>
+        <input id="localSelling" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+
+      <div id="quotes_div" class="allDivs">
+        <label>Number of AddOns for Quotes : </label>
+        <input id="quotes" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+
+      <div id="renewals_div" class="allDivs">
+        <label>Number of AddOns for Renewals</label>
+        <input id="renewals" class="store" placeholder="number of add ons" type="number" min="0">
+      </div>
+
+      <br />
+      <div id="error" class="allDivs" style="color:red">
+
+      </div>
+      <br />
+
+      <button type="button" onclick="Create()" style="margin-left: 20px">Submit</button>
+      <br><br>
+      <button type="button" onclick="Reset()" style="margin-left: 20px">Reset</button>
+    </form>
+    <br><br>
+    <textArea id="demo" cols=50 rows=10 placeholder="after submit you will get license schema here"></textarea>
+  </div>
+</body>
+
+</html>
